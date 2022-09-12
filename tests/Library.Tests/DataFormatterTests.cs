@@ -7,28 +7,27 @@ public class DateFormatterTest
     public void Setup()
     {
     }
-    public class DateFormatterTest
+
+    [Test]
+    public void TestFormatCorrect()
     {
-        [Test]
-        public void TestFormatCorrect()
-        {
-            string expected = "1997-11-10";
-            string testDate = "10/11/1997";
-            Assert.AreEqual(DateFormatter.ChangeFormat(testDate), expected);
-        }
-        [Test]
-        public void TestWrongFormat()
-        {
-            string expected = null;
-            string testDate = "1011/1997";
-            Assert.AreEqual(DateFormatter.ChangeFormat(testDate), expected);
-        }
-        [Test]
-        public void TestEmpty()
-        {
-            string expected = null;
-            string testDate = "";
-            Assert.AreEqual(DateFormatter.ChangeFormat(testDate), expected);
-        }
+        string expected = "1997-12-10";
+        string testDate = "10/12/1997";
+        Assert.AreEqual(DateFormatter.ChangeFormat(testDate), expected);
     }
+    [Test]
+    public void TestWrongFormat()
+    {
+        string expected = null;
+        string testDate = "1011/1997";
+        Assert.AreEqual(DateFormatter.ChangeFormat(testDate), expected);
+    }
+    [Test]
+    public void TestEmpty()
+    {
+        string expected = null;
+        string testDate = "";
+        Assert.AreEqual(DateFormatter.ChangeFormat(testDate), expected);
+    }
+
 }
