@@ -1,7 +1,7 @@
 using TestDateFormat;
 namespace Library.Tests;
 
-public class Tests
+public class DateFormatterTest
 {
     [SetUp]
     public void Setup()
